@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Parts Store</title>
+    <style>
+        /* Reset gaya dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: darkmidnightblue;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 1000; 
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px; 
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: steelblue; 
+            color: white;
+        }
+        .home-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(30%);
+        }
+
+        .home-title {
+            position: absolute;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 0 20px;
+            z-index: 10;
+        }
+
+        .home-title span {
+            color: deepskyblue;
+            font-size: 40px; 
+            border-bottom: 2px solid deepskyblue; 
+        }
+        .products-section, .about-section {
+            padding: 60px 40px;
+            background-color: white;
+        }
+
+        .about-section {
+            background-color: aliceblue; 
+        }
+
+        h2 {
+            font-size: 22px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .about-section p {
+            color: gray;
+            font-size: 14px;
+        }
+        .products-grid {
+            display: grid;
+        
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; 
+            border-radius: 4px;
+        }
+
+        .product-card p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+
+        @media (max-width: 767px) {
+            .products-grid {
+               
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            
+            .navbar {
+                padding: 15px 20px;
+            }
+            
+            .home-title {
+                font-size: 24px;
+            }
+            
+            .home-title span {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">PC PARTS STORE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>   
+
+    <section id="home" class="home-section">
+        <img class="bg-image" src="bagroud.png" alt="Background PC">
+        <h1 class="home-title">Upgrade PC, Maksimalkan <span>Performa.</span></h1> 
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>Products</h2>
+        
+        <div class="products-grid">
+            <!-- Kartu 1: SSD -->
+            <div class="product-card">
+                <img src="ssd.png" alt="SSD">
+                <p>SSD</p>
+            </div>
+            
+            <!-- Kartu 2: RAM -->
+            <div class="product-card">
+                <img src="ram.png" alt="RAM">
+                <p>RAM</p>
+            </div>
+            
+            <!-- Kartu 3: Processor -->
+            <div class="product-card">
+                <img src="procesor.png" alt="Processor">
+                <p>Processor</p>
+            </div>
+            
+            <!-- Kartu 4: Kartu Grafis -->
+            <div class="product-card">
+                <img src="vga.png" alt="Kartu Grafis">
+                <p>Kartu Grafis</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>Lebih banyak</h2>
+        <p>Pilihan komponen buat kebutuhan upgrade PC loh.</p>
+    </section>
+
+</body>
+</html>
